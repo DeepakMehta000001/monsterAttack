@@ -45,9 +45,11 @@
     <section class="row log">
         <div class="small-12 columns">
             <ul>
-                <li>
-
+                <li v-for="(log, i) in gameLogs">
+                    <p v-if="i%2==1" class="monster-turn">{{ log }}</p>
+                    <p v-if="i%2==0" class="player-turn">{{ log }}</p>
                 </li>
+                
             </ul>
         </div>
     </section>
